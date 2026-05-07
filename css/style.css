@@ -1,0 +1,36 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100dvw;
+    text-align: center;
+    margin: 0 auto;
+    color: rgb(47, 45, 45);
+}
+
+.title {
+    background: linear-gradient(rgb(81, 124, 109, 0.5), rgb(152, 83, 99, 0.5));
+    padding: 15px;
+}
+
+.parametri {
+    padding: 45px;
+    text-align: left;
+}
+
+#numKm, #etaUtente {
+    display: inline-block;
+    min-height: 1rem;
+    min-width: 45px;
+    padding: 5x;
+    border: 1px solid black;
+    vertical-align: middle;
+}
+
+.parametri > div {
+    margin-top: 10px;
+}
