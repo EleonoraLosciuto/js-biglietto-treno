@@ -20,21 +20,32 @@
 .price-card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: 0 auto;
     margin-top: 75px;
     padding: 18px 0;
-    font-size: large;
+    font-size: 25px;
+    text-transform: uppercase;
     font-weight: 700;
-    height: 250px;
-    width: 25%;
+    height: 300px;
+    width: 200px;
     border: 2px solid pink;
+    border-radius: 25px;
+    background-color: bisque;
 }
 
 #priceResult {
-    bottom: 25px;
-    min-width: 50%;
-    min-height: 25%;
+    width: 75%;
+    height: 90px;
     border: solid 2px grey;
+    background-color: azure;
+    line-height: 90px;
+    border-radius: 20px;
+}
+
+.ticket-details {
+    font-size: 15px;
+    text-transform: initial;
+    color: grey;
 }
