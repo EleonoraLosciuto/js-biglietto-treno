@@ -1,9 +1,10 @@
 // define variable to calculate ticket price
 
-const yearCurrent = 2026;
+const dateCurrent = new Date
+const yearCurrent = dateCurrent.getFullYear(); // funzione JS per ricavare anno corrente
 const birthYear = parseInt(prompt("Inserisci il tuo anno di nascita"));
 const age = yearCurrent - birthYear;
-const km = parseInt(prompt("Inserisci quanti km dovrai percorrere"));
+const km = parseFloat(prompt("Inserisci quanti km dovrai percorrere")); // parseFloat per decimali
 const standardPrice = 0.21
 alert("this web page is ugly but functions as it should!!");
 
@@ -14,31 +15,18 @@ console.log(km);
 // If condition to calculate ticket price
 // Defensive programming: I set extremes' conditions first
 // I always check price per km in console
+// I also show in html price per km and tot. km, as well as ticket price
 
-
+let priceTicket = standardPrice * km;
 if (age < 18) {
-    let priceKm = standardPrice * 0.8;
-    let priceTicket = (priceKm * km).toFixed(2);
-    document.getElementById('prezzo-km').innerHTML=("Prezzo per chilometro"+" €"+ priceKm.toFixed(3));
-    document.getElementById('priceResult').innerHTML=`€ ${priceTicket}`;
-    console.log("€" + priceKm + " / km");
+    priceTicket = priceTicket * 0.8;
 }
 else if (age > 65) {
-    let priceKm = standardPrice * 0.6;
-    let priceTicket = (priceKm * km).toFixed(2);
-    document.getElementById('prezzo-km').innerHTML=("Prezzo per chilometro"+" €"+ priceKm.toFixed(3));
-    document.getElementById('priceResult').innerHTML=`€ ${priceTicket}`
-    console.log("€" + priceKm + " / km");
-}
-else {
-    let priceKm = standardPrice;
-    let priceTicket = (priceKm * km).toFixed(2);
-    document.getElementById('prezzo-km').innerHTML=("Prezzo per chilometro"+" €"+priceKm.toFixed(2));
-    document.getElementById('priceResult').innerHTML=`€ ${priceTicket}`
-    console.log("€" + priceKm + " / km");
+    priceTicket = priceTicket * 0.6;
 }
 
-document.getElementById('num-km').innerHTML=("Km da percorrere " + km);
+    document.getElementById('priceResult').innerHTML=`€ ${priceTicket.toFixed(2)}`;
+    document.getElementById('num-km').innerHTML=("Km da percorrere " + km);
 
 
 
