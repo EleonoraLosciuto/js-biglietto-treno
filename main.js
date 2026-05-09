@@ -14,8 +14,7 @@ console.log(km);
 
 // If condition to calculate ticket price
 // Defensive programming: I set extremes' conditions first
-// I always check price per km in console
-// I also show in html price per km and tot. km, as well as ticket price
+// I also show in html Ticket price and num. km
 
 let priceTicket = standardPrice * km;
 if (age < 18) {
