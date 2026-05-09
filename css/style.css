@@ -5,15 +5,19 @@
     box-sizing: border-box;
 }
 
+body {
+    background: linear-gradient(to left, rgb(84, 23, 198), rgb(55, 73, 194));
+    background-size: auto;
+}
+
 .container {
     width: 100dvw;
     text-align: center;
     margin: 0 auto;
-    color: rgb(47, 45, 45);
+    color: white;
 }
 
 .title {
-    background: linear-gradient(rgb(81, 124, 109, 0.5), rgb(152, 83, 99, 0.5));
     padding: 15px;
 }
 
@@ -30,9 +34,10 @@
     font-weight: 700;
     height: 300px;
     width: 200px;
-    border: 2px solid pink;
+    border: 2px solid rgb(185, 184, 242);
     border-radius: 25px;
-    background-color: bisque;
+    background-color: whitesmoke;
+    color: grey;
 }
 
 #priceResult {
