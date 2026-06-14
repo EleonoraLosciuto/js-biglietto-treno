@@ -16,12 +16,20 @@ console.log(km);
 // Defensive programming: I set extremes' conditions first
 // I also show in html Ticket price and num. km
 
-let priceTicket = standardPrice * km;
-if (age < 18) {
+const inputInvalid = isNaN(km) || isNaN(age) || age > 100 || age < 0
+let priceTicket;
+
+if (inputInvalid) {console.error("invalid input!")}
+else {
+    priceTicket = standardPrice * km;
+
+    if (age < 18) {
     priceTicket = priceTicket * 0.8;
 }
+
 else if (age > 65) {
     priceTicket = priceTicket * 0.6;
+}
 }
 
     document.getElementById('priceResult').innerHTML=`€ ${priceTicket.toFixed(2)}`;
